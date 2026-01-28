@@ -1,0 +1,16 @@
+<h2>People List</h2>
+<table border="1">
+  <tr>
+    <th>Name</th>
+    <th>Email</th>
+    <th>Actions</th>
+  </tr>
+  <tr *ngFor="let p of people">
+    <td>{{ p.name }}</td>
+    <td>{{ p.email }}</td>
+    <td>
+      <button (click)="editPerson(p.id)">Edit</button>
+      <button (click)="deletePerson(p.id)">Delete</button>
+    </td>
+  </tr>
+</table>
